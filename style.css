@@ -1,0 +1,104 @@
+* {
+    font-family: 'Lobster', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 100;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    filter: contrast(1);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cuca {
+    width: 600px;
+    height: 600px;
+    border-radius: 150px;
+    background-color: rgb(200, 109, 95);
+    margin-right: 100px;
+    display: flex;
+    z-index: 100;
+}
+
+.ano {
+    width: 150px;
+    height: 150px;
+    margin: auto auto auto 0px;
+    clip-path: polygon(13% 51%, 51% 22%, 29% 52%, 54% 65%, 27% 61%, 35% 84%, 16% 69%, 0 84%, 0 48%, 0 23%);
+    background: #000;
+    animation: dilatacion 1s alternate infinite;
+    animation-timing-function: initial;
+}
+
+.pija {
+    width: 450px;
+    height: 100px;
+    border-radius: 40px;
+    background-color: rgb(233, 109, 95);
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+    animation: metesaca 2s alternate infinite;
+}
+
+pija, cuca {
+    filter: blur(100px);
+}
+
+.glande {
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    background-color: rgb(216, 28, 216);
+    transform: translate(400px);
+    clip-path: polygon(22% 0, 52% 16%, 80% 27%, 96% 50%, 79% 81%, 54% 87%, 23% 100%);
+}
+
+.webos {
+    width: 210px;
+    height: 210px;
+    background: rgb(203, 100, 80);
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    position: absolute;
+}
+
+.webos:first-child {
+    transform: translate(-100px, -85px);
+}
+
+.webos:nth-child(2) {
+    transform: translate(-100px, 85px);
+}
+
+@keyframes metesaca {
+    0% {
+        transform: translate(0px);
+    }
+
+    100% {
+        transform: translate(200px);
+    }
+}
+
+@keyframes dilatacion {
+    0% {
+        width: 150px;
+        height: 150px;
+    }
+
+    50% {
+        width: 210px;
+        height: 210px;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+    }
+}
